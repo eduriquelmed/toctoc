@@ -100,12 +100,15 @@ export default function App() {
     if (minutes < 10) {
       minutes = "0" + minutes;
     }
+    if (timeEndMinutes < 10) {
+      timeEndMinutes = "0" + timeEndMinutes;
+    }
     setTitle(
       hour + ":" + minutes + " - " + timeEndHours + ":" + timeEndMinutes
     );
 
     while (Number(timeEndHours) >= Number(hour)) {
-      if (minutes < 10 && minutes != "00") {
+      if (minutes < 10 && minutes !== "00") {
         minutes = "0" + minutes;
       }
       labels.push(hour + ":" + minutes);
@@ -134,12 +137,15 @@ export default function App() {
     if (minutes2 < 10) {
       minutes2 = "0" + minutes2;
     }
+    if (timeEndMinutes2 < 10) {
+      timeEndMinutes2 = "0" + timeEndMinutes2;
+    }
     setTitle2(
       hour2 + ":" + minutes2 + " - " + timeEndHours2 + ":" + timeEndMinutes2
     );
 
     while (Number(timeEndHours2) >= Number(hour2)) {
-      if (minutes2 < 10 && minutes2 != "00") {
+      if (minutes2 < 10 && minutes2 !== "00") {
         minutes2 = "0" + minutes2;
       }
       labels2.push(hour2 + ":" + minutes2);
